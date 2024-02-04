@@ -92,8 +92,8 @@ def getTimeTableClass() -> str:
         tmp = dt_cons[elem:elem + step_consult]
         data_consult.append([(i[0], ''.join(i[-1].split()[:3]), i[-1].split()[-1]) for i in tmp])
 
-    for i in data_consult:
-        print(i)
+    # for i in data_consult:
+    #     print(i)
 
     return render_template(
         'time_table_for_class.html',
