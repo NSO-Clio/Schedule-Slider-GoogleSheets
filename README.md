@@ -92,6 +92,27 @@ refreshAt(YOUR_HOUR,YOUR_MINUT,0);
 </script>
 ```
 
+# Дополнительные заметки по администрированию
+
+- Расписание для классов должно быть одного стиля для первой, второй смены и расписания консультаций
+
+Пример:
+
+- Первая смена
+
+<img style="width: 80%; height: 80%;" src="https://github.com/NSO-OSKOM/Web-application-for-school-schedule/blob/main/forREADME/photo_2023-12-19_23-38-25.jpg">
+
+- Вторая смена
+
+<img style="width: 80%; height: 80%;" src="https://github.com/NSO-OSKOM/Web-application-for-school-schedule/blob/main/forREADME/photo_2023-12-19_23-38-24.jpg">
+
+- Консультации
+
+<img style="width: 80%; height: 80%;" src="https://github.com/NSO-OSKOM/Web-application-for-school-schedule/blob/main/forREADME/photo_2023-12-19_23-38-21.jpg">
+
+Пример google таблици можно посмотреть по ссылке https://docs.google.com/spreadsheets/d/1ef__SA0CMETxDydDADxHaUU10-NLQmL6T16MOYVUznI/edit#gid=0 
+
+
 # Наши контакты
 
 **Андреасян Егор Андреасович**:
