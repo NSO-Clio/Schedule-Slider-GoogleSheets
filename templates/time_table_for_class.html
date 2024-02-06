@@ -23,16 +23,16 @@
             <div class="slider__item">
                 <!-- содержимое слайда -->
                 <center>
-                    <h1 class="text">{{ day_week }}</h1>
-                    <h1 class="text"> I смена </h1>
+                    <h1 class="text" style="font-size: 2.5vw;">{{ day_week }}</h1>
+                    <h1 class="text" style="font-size: 2.5vw;"> I смена </h1>
 
                     {% if len_one - 1 > classes %}
                     <table>
                         <tr>
                             <th style="width: 50px">№ &nbsp;</th>
-                            <th style="width: 150px">Время &nbsp;</th>
+                            <th style="width: 380px">Время &nbsp;</th>
                             {% for cnt_classe in dataLessons_gid_one[classes][0] %}
-                            <th style="width: 160px">{{ cnt_classe.upper() }}</th>
+                            <th style="width: 380px">{{ cnt_classe.upper() }}</th>
                             {% endfor %}
                         </tr>
                         {% for elem in dataLessons_gid_one[classes][1:] %}
@@ -49,9 +49,9 @@
                     <table>
                         <tr>
                             <th style="width: 50px">№ &nbsp;</th>
-                            <th style="width: 150px">Время &nbsp;</th>
+                            <th style="width: 380px">Время &nbsp;</th>
                             {% for cnt_classe in dataLessons_gid_one[classes + 1][0] %}
-                            <th style="width: 160px">{{ cnt_classe.upper() }}</th>
+                            <th style="width: 380px">{{ cnt_classe.upper() }}</th>
                             {% endfor %}
                         </tr>
                         {% for elem in dataLessons_gid_one[classes + 1][1:] %}
@@ -68,9 +68,9 @@
                     <table>
                         <tr>
                             <th style="width: 50px">№ &nbsp;</th>
-                            <th style="width: 150px">Время &nbsp;</th>
+                            <th style="width: 380px">Время &nbsp;</th>
                             {% for cnt_classe in dataLessons_gid_one[classes][0] %}
-                            <th style="width: 160px">{{ cnt_classe.upper() }}</th>
+                            <th style="width: 380px">{{ cnt_classe.upper() }}</th>
                             {% endfor %}
                         </tr>
                         {% for elem in dataLessons_gid_one[classes][1:] %}
@@ -93,15 +93,15 @@
                 <div class="slider__item">
                     <!-- содержимое слайда -->
                     <center>
-                        <h1 class="text">{{ day_week }}</h1>
-                        <h1 class="text">II смена</h1>
+                        <h1 class="text" style="font-size: 2.5vw;">{{ day_week }}</h1>
+                        <h1 class="text" style="font-size: 2.5vw;">II смена</h1>
                         {% if len_one - 1 > classes %}
                         <table>
                             <tr>
                                 <th style="width: 50px">№ &nbsp;</th>
-                                <th style="width: 150px">Время &nbsp;</th>
+                                <th style="width: 380px">Время &nbsp;</th>
                                 {% for cnt_classe in dataLessons_gid_two[classes][0] %}
-                                <th style="width: 160px">{{ cnt_classe.upper() }}</th>
+                                <th style="width: 380px">{{ cnt_classe.upper() }}</th>
                                 {% endfor %}
                             </tr>
                             {% for elem in dataLessons_gid_two[classes][1:] %}
@@ -118,9 +118,9 @@
                         <table>
                             <tr>
                                 <th style="width: 50px">№ &nbsp;</th>
-                                <th style="width: 150px">Время &nbsp;</th>
+                                <th style="width: 380px">Время &nbsp;</th>
                                 {% for cnt_classe in dataLessons_gid_two[classes + 1][0] %}
-                                <th style="width: 160px">{{ cnt_classe.upper() }}</th>
+                                <th style="width: 380px">{{ cnt_classe.upper() }}</th>
                                 {% endfor %}
                             </tr>
                             {% for elem in dataLessons_gid_two[classes + 1][1:] %}
@@ -137,9 +137,9 @@
                         <table>
                             <tr>
                                 <th style="width: 50px">№ &nbsp;</th>
-                                <th style="width: 150px">Время &nbsp;</th>
+                                <th style="width: 380px">Время &nbsp;</th>
                                 {% for cnt_classe in dataLessons_gid_one[classes][0] %}
-                                <th style="width: 160px">{{ cnt_classe.upper() }}</th>
+                                <th style="width: 380px">{{ cnt_classe.upper() }}</th>
                                 {% endfor %}
                             </tr>
                             {% for elem in dataLessons_gid_one[classes][1:] %}
@@ -161,14 +161,14 @@
                 <div class="slider__item">
                     <!-- содержимое слайда -->
                     <center>
-                        <h1 class="text">{{ day_week }}</h1>
-                        <h1 class="text">II смена</h1>
+                        <h1 class="text" style="font-size: 2.5vw;">{{ day_week }}</h1>
+                        <h1 class="text" style="font-size: 2.5vw;">II смена</h1>
                         <table>
                             <tr>
                                 <th style="width: 50px">№ &nbsp;</th>
-                                <th style="width: 150px">Время &nbsp;</th>
+                                <th style="width: 250px">Время &nbsp;</th>
                                 {% for cnt_classe in dataLessons_gid_two[classes][0] %}
-                                <th style="width: 160px">{{ cnt_classe.upper() }}</th>
+                                <th style="width: 250px">{{ cnt_classe.upper() }}</th>
                                 {% endfor %}
                             </tr>
                             {% for elem in dataLessons_gid_two[classes][1:] %}
@@ -189,15 +189,15 @@
             <div class="slider__item">
                 <!-- содержимое слайда -->
                 <center>
-                    <h1 class="text">{{ day_week }}</h1>
-                    <h1 class="text">расписание консультаций</h1>
+                    <h1 class="text" style="font-size: 2.5vw;">{{ day_week }}</h1>
+                    <h1 class="text" style="margin-bottom: 150px; font-size: 2.5vw;">расписание консультаций</h1>
                     {% for teacher in range(len_cons) %}
 
-                    <table style="display: inline; margin: 100px">
+                    <table style="display: inline; margin: 150px">
                         <tr>
-                            <th style="width: 150px">Учитель &nbsp;</th>
-                            <th style="width: 150px">Время &nbsp;</th>
-                            <th style="width: 150px">Кабинет &nbsp;</th>
+                            <th style="width: 350px">Учитель &nbsp;</th>
+                            <th style="width: 350px">Время &nbsp;</th>
+                            <th style="width: 350px">Кабинет &nbsp;</th>
                         </tr>
                         {% for elem in data_TimeTable_Teacher[teacher] %}
                         <tr>
