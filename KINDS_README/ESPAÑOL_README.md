@@ -4,9 +4,9 @@ Slider de horario como una pantalla web
 
 # Otros idiomas
 
-- [Inglés](KINDS_README/ENGLISH_README.md)
-- [Español](KINDS_README/ESPAÑOL_README.md)
-- [Ruso](README.md)
+- [Inglés](../KINDS_README/ENGLISH_README.md)
+- [Español](../KINDS_README/ESPAÑOL_README.md)
+- [Ruso](../README.md)
 
 # Cliente
 
