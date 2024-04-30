@@ -11,7 +11,8 @@ DAY_DATA = {
     3: "среда",
     4: "четверг",
     5: "пятница",
-    6: "суббота"
+    6: "понедельник",
+    7: 'понедельник' # "суббота"
 }
 application = Flask(__name__, template_folder='templates')
 tw = TableWorker(
@@ -65,35 +66,35 @@ def getTimeTableClass() -> str:
         tmp_two = [class_one] + tmp_two.iloc[ind_elem:ind_elem + 8, :].values.tolist()
         data_two.append(tmp_two)
 
-    # for elem in data_one:
-    #     print(elem)
-    #
-    # for elem in range(len(data_one)):
-    #     print(elem, data_one[elem])
-    #
-    # print(len(data_one), len(data_two))
-    # for i in range(0, 1, 2) if len(data_two) > 0 else range(50):
-    #     print(i)
-    #
-    # print(tw.get_Data(gid_consult=True))
-    # print(tw.get_Data(gid_consult=True).columns)
-    # print(tw.get_Data(gid_consult=True).iloc[46, :].values)
-    # print(len(tw.get_Data(gid_consult=True)))
+    for elem in data_one:
+        print(elem)
+
+    for elem in range(len(data_one)):
+        print(elem, data_one[elem])
+
+    print(len(data_one), len(data_two))
+    for i in range(0, 1, 2) if len(data_two) > 0 else range(50):
+        print(i)
+
+    print(tw.get_Data(gid_consult=True))
+    print(tw.get_Data(gid_consult=True).columns)
+    print(tw.get_Data(gid_consult=True).iloc[46, :].values)
+    print(len(tw.get_Data(gid_consult=True)))
 
     data_consult = []
     dt_cons = tw.get_Data(gid_consult=True)[['Учителя', DAY_DATA[day]]].copy()
     dt_cons = dt_cons[dt_cons[DAY_DATA[day]] != ' '].values.tolist()
-    # print(dt_cons)
-    # print(len(dt_cons))
+    print(dt_cons)
+    print(len(dt_cons))
 
     step_consult = max([i for i in range(1, 15) if len(dt_cons) % i == 0])
-    # print(step_consult)
+    print(step_consult)
     for elem in range(0, len(dt_cons), step_consult):
         tmp = dt_cons[elem:elem + step_consult]
         data_consult.append([(i[0], ''.join(i[-1].split()[:3]), i[-1].split()[-1]) for i in tmp])
 
-    # for i in data_consult:
-    #     print(i)
+    for i in data_consult:
+        print(i)
 
     return render_template(
         'time_table_for_class.html',
