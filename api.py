@@ -12,7 +12,7 @@ DAY_DATA = {
     4: "четверг",
     5: "пятница",
     6: "понедельник",
-    7: 'понедельник' # "суббота"
+    7: "понедельник" # "суббота"
 }
 application = Flask(__name__, template_folder='templates')
 tw = TableWorker(
@@ -89,9 +89,16 @@ def getTimeTableClass() -> str:
 
     step_consult = max([i for i in range(1, 15) if len(dt_cons) % i == 0])
     print(step_consult)
+    if step_consult == 1 and len(dt_cons) > 20:
+        step_consult = 10
+
     for elem in range(0, len(dt_cons), step_consult):
-        tmp = dt_cons[elem:elem + step_consult]
-        data_consult.append([(i[0], ''.join(i[-1].split()[:3]), i[-1].split()[-1]) for i in tmp])
+        if elem // 10 == len(dt_cons) // 10:
+            tmp = dt_cons[elem:len(dt_cons)]
+            data_consult.append([(i[0], ''.join(i[-1].split()[:3]), i[-1].split()[-1]) for i in tmp])
+        else:
+            tmp = dt_cons[elem:elem + step_consult]
+            data_consult.append([(i[0], ''.join(i[-1].split()[:3]), i[-1].split()[-1]) for i in tmp])
 
     for i in data_consult:
         print(i)
