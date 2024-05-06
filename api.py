@@ -36,6 +36,7 @@ def getTimeTableClass() -> str:
 
     now = datetime.now()
     day = datetime.isoweekday(now)
+    print(f'day: {day}, {DAY_DATA[day]}')
     classes = tw.get_classes()
 
     data_one = []
@@ -89,7 +90,7 @@ def getTimeTableClass() -> str:
 
     step_consult = max([i for i in range(1, 15) if len(dt_cons) % i == 0])
     print(step_consult)
-    if step_consult == 1 and len(dt_cons) > 20:
+    if step_consult == 1 and len(dt_cons) > 10:
         step_consult = 10
 
     for elem in range(0, len(dt_cons), step_consult):
