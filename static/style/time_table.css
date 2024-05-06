@@ -1,18 +1,18 @@
 body{
-  font-family: 'Lato';
+    font-family: 'Lato';
 
 }
 
 nav .a{
-	color: white;
-	font-size: 60px;
-	font-weight: 500;
-	display: block;
-	text-decoration: none;
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+    display: block;
+    text-decoration: none;
 }
 nav .a:hover{
-	color: #000;
-	transition: 0.5s;
+    color: #000;
+    transition: 0.5s;
 }
 header{
     background-color: #3b85da;
@@ -34,8 +34,8 @@ img{
     height: 500px;
 }
 h1{
-  font-size: 80px;
-  text-align: center;
+    font-size: 80px;
+    text-align: center;
 }
 
 
@@ -46,7 +46,7 @@ h1{
 }
 
 .k10{
-  margin: 60px 160px;
+    margin: 60px 160px;
 }
 .k8{
     margin: -320px 310px;
@@ -135,7 +135,7 @@ h1{
     transition: all .20s;
     border-radius: 15px;
 }
-  
+
 #dropdown-menu a {
     color: white;
     padding: 12px 16px;
@@ -147,37 +147,37 @@ h1{
 
 
 .icon{
-  width: 30px;
-  height: 30px;
-  border: 3px solid transparent;
-  position: absolute;
-  transform: rotate(45deg);
-  right: 0;
-  top: 0;
-  z-index: -1;
-  transition: all .35s;
+    width: 30px;
+    height: 30px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
 }
 
 .icon svg{
-  width: 30px;
-  position: absolute;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
-  transform: rotate(-45deg);
-  fill: #ce4646;
-  transition: all .35s;
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #ce4646;
+    transition: all .35s;
 }
 
 #dropdown-menu a:active{
-  width: 160px;
-  border: 3px solid #ce4646;
-  background: rgb(39, 38, 38);
-  color: #ce4646;
+    width: 160px;
+    border: 3px solid #ce4646;
+    background: rgb(39, 38, 38);
+    color: #ce4646;
 }
 
 #dropdown-menu a:active + .icon{
-  border: 3px solid #ce4646;
-  right: -25%;
+    border: 3px solid #ce4646;
+    right: -25%;
 }
 .gfg {
     font-size: 40px;
@@ -191,83 +191,83 @@ footer{
     margin-top: 750px;
 }
 .open-button {
-  background-color: #3b85da;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 16px 20px;
-  border: none;
-  bottom: 23px;
-  right: 28px;
-  width: 100%;
+    background-color: #3b85da;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 16px 20px;
+    border: none;
+    bottom: 23px;
+    right: 28px;
+    width: 100%;
 }
 .open-button:hover{
-  background: white;
-  color: black;
+    background: white;
+    color: black;
 }
 
 .form-popup {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  z-index: 9;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
 
 }
 
 .form-container {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  width: 700px;
-  height: auto;
-  padding: 10px;
-  border: none;
-  background: rgb(39, 38, 38);
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    border: none;
+    background: rgb(39, 38, 38);
 }
 
 .form-container input[type=number], .form-container input[type=password] {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
 
 }
 
 .form-container input[type=number]:focus, .form-container input[type=password]:focus {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  outline: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    outline: none;
 }
 
 .form-container .btn {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  background-color: #3b85da;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-  font-size: 35px;
-  font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background-color: #3b85da;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    font-size: 35px;
+    font-weight: bold;
 
 }
 
 .form-container .cancel {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  background-color:   #ce4646;
-  color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background-color:   #ce4646;
+    color: white;
 }
 
 .form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+    opacity: 1;
 
 }
 

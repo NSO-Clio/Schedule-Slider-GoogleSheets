@@ -1,42 +1,143 @@
+@font-face {
+font-family: 'Intro';
+src:url('https://cdn.rawgit.com/kattergil/intro-webfont/4b1fc34e/Intro.ttf.woff') format('woff'),
+url('https://cdn.rawgit.com/kattergil/intro-webfont/4b1fc34e/Intro.ttf.svg#Intro') format('svg'),
+url('https://cdn.rawgit.com/kattergil/intro-webfont/4b1fc34e/Intro.ttf.eot'),
+url('https://cdn.rawgit.com/kattergil/intro-webfont/4b1fc34e/Intro.ttf.eot?#iefix') format('embedded-opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+
 body{
-  font-family: 'Lato', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .slider__item{
 
 }
 .text{
+    font-family: 'Intro';
     color: white;
+    text-align: center;
     text-transform:uppercase;
+    margin-top: 0;
+}
+/*стили для часов*/
+
+.clock {
+    font-family: 'Intro';
+    width: 1001px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2.3vw;
+    font-weight: 500;
+    color: #82d5dd;
+    display: inline;
+}
+.clock ul {
+    margin: 0 auto;
+    list-style: none;
+}
+.clock ul li {
+    display: inline;
+}
+.clock ul li#separator {
+    -moz-animation: myfade 1s ease infinite;
+    -webkit-animation: myfade 1s ease infinite;
+}
+/*стили для даты*/
+#date{
+    position: absolute;
+    font-family: 'Intro';
+    right: 0;
+    top: 0;
+    font-size: 2.3vw;
+    font-weight: 500;
+    color: #82d5dd;
+}
+/*стили для логотипа*/
+.img_c{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+.imgg{
+    width: 37%;
+    height: 37%;
 }
 
+/* Animation */
+@-webkit-keyframes myfade {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-moz-keyframes myfade {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    };
+}
+
+
+html {
+    height: 100%;
+}
+
+
+/*стили для таблицы*/
 table{
-    font-size: 0.8vw;
+    font-size: 1.07vw;
+    border-radius: 20px;
+    border-spacing: 0;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 99%;
+    text-align: center;
+    height: 50%;
+}
+.tt{
+    font-size: 1.1vw;
     border-radius: 20px;
     border-spacing: 0;
     text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
     text-align: center;
-    border-collapse: collapse;
 }
-
-
 th {
-    background: #3b85da;
-    color: white;
+    background: #82d5dd;
+    color: #23262b;
     text-shadow: 0 1px 1px #2D2020;
-    padding: 10px 20px;
-
+    padding: 10px 10px;
+    border: 10;
+    border-color: white;
+    font-size: 1.07vw;
 }
+/*
 th, td {
     border-style: solid;
     border-width: 0 1px 1px 0;
     border-color: white;
 }
+*/
 th:first-child, td:first-child {
     text-align: left;
 }
@@ -49,9 +150,11 @@ th:last-child {
 }
 td {
     padding: 10px 20px;
-    color: white;
-    background: rgb(92, 92, 92);
-    width: 80px;
+    color: e2e2e2;
+    border: 100px;
+    border-color: white;
+    background: #23262b;
+
 }
 tr:last-child td:first-child {
     border-radius: 0 0 0 10px;
@@ -70,41 +173,43 @@ tr td:last-child {
 
 .wrapper {
 
-  margin: 10px auto;
+    margin: 10px auto;
 }
 
 .slider {
-  position: relative;
+    position: relative;
+    margin-top: 0;
+
 }
 
 .slider .slider__item {
-  display: block;
-  text-align: center;
-  transition: 0.2s;
-  margin: 15px;
+    display: block;
+    text-align: center;
+    transition: 0.2s;
+    margin: 11px;
 }
 
 
 
 .slider .slider__item .slick-center {
-  opacity: 1;
+    opacity: 1;
 }
 
 .slider .slick-arrow {
-  position: absolute;
-  cursor: pointer;
-  font-size: 25px;
-  background-color: rgb(39, 38, 38);;
-  background-color: rgb(39, 38, 38);;
-  padding: 3px 10px;
-  bottom: -50px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 5px;
+    background-color: #38393e;
+    background-color: #38393e;
+    padding: 3px 10px;
+    bottom: -50px;
 }
 
 .slider .slick-prev {
 
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .slider .slick-next {
-  margin: 0px 50px;
+    margin: 0px 50px;
 }
