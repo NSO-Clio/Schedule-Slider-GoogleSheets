@@ -46,6 +46,7 @@ def getTimeTableClass() -> str:
             if i in classes[j]:
                 data_classes_one.append(i)
     step_one = max([i for i in range(1, 10) if len(data_classes_one) % i == 0])
+    step_one = step_one if step_one > 1 else 6
     for elem in range(0, len(data_classes_one), step_one):
         class_one = data_classes_one[elem:elem + step_one]
         tmp_one = tw.get_Data(gid=True)['gid_one'][['Дни', 'Уроки', 'Время'] + class_one]
@@ -59,7 +60,8 @@ def getTimeTableClass() -> str:
         for j in classes:
             if i in classes[j]:
                 data_classes_two.append(i)
-    step_two = max([i for i in range(1, 10) if len(data_classes_one) % i == 0 or i < len(data_classes_two)])
+    step_two = max([i for i in range(1, 10) if len(data_classes_one) % i == 0])
+    step_two = step_two if step_two > 1 else 6
     for elem in range(0, len(data_classes_two), step_two):
         class_one = data_classes_two[elem:elem + step_two]
         tmp_two = tw.get_Data(gid=True)['gid_two'][['Дни', 'Уроки', 'Время'] + class_one]

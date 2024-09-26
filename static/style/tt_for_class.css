@@ -109,9 +109,9 @@ table{
     text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
-    width: 99%;
+    width: 90%;
     text-align: center;
-    height: 50%;
+    height: auto;
 }
 .tt{
     font-size: 1.1vw;
