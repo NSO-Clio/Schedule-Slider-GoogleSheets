@@ -33,60 +33,187 @@
             <!-- создаем слайд -->
 
             {% for classes in range(0, len_one) %}
-            <div class="slider__item">
-                <!-- содержимое слайда -->
-                <center>
-                    <h1 class="text" style="font-size: 3vw;">{{ day_week }}</h1>
-                    <h1 class="text" style="font-size: 3vw;"> I смена </h1>
-                    <table>
-                        <tr>
-                            <th style="width: 50px">№</th>
-                            <th style="width: 800px">Время </th>
-                            {% for cnt_classe in dataLessons_gid_one[classes][0] %}
-                                <th style="width: 900px">{{ cnt_classe.upper() }}</th>
+                {% if classes + 1 == len_one - 1 and dataLessons_gid_one[classes + 1][0]|length < 6 %}
+                <div class="slider__item">
+                    <!-- содержимое слайда -->
+                    <center>
+                        <h1 class="text" style="font-size: 3vw;">{{ day_week }}</h1>
+                        <h1 class="text" style="font-size: 3vw;"> I смена </h1>
+                        <table>
+                            <tr>
+                                <th style="width: 50px">№</th>
+                                <th style="width: 400px">Время </th>
+                                {% for cnt_classe in dataLessons_gid_one[classes][0] %}
+                                    <th style="width: 600px">{{ cnt_classe.upper() }}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for elem in dataLessons_gid_one[classes][1:] %}
+                            <tr>
+                                <td>{{ elem[1] }}</td>
+                                <td>{{ elem[2] }}</td>
+                                {% for lessons in elem[3:] %}
+                                    <td>{{ lessons }}</td>
+                                {% endfor %}
+                            </tr>
                             {% endfor %}
-                        </tr>
-                        {% for elem in dataLessons_gid_one[classes][1:] %}
-                        <tr>
-                            <td>{{ elem[1] }}</td>
-                            <td>{{ elem[2] }}</td>
-                            {% for lessons in elem[3:] %}
-                                <td>{{ lessons }}</td>
+                        </table>
+
+                        <table>
+                            <tr>
+                                <th style="width: 50px">№</th>
+                                <th style="width: 400px">Время </th>
+                                {% for cnt_classe in dataLessons_gid_one[classes + 1][0] %}
+                                    <th style="width: 600px">{{ cnt_classe.upper() }}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for elem in dataLessons_gid_one[classes + 1][1:] %}
+                            <tr>
+                                <td>{{ elem[1] }}</td>
+                                <td>{{ elem[2] }}</td>
+                                {% for lessons in elem[3:] %}
+                                    <td>{{ lessons }}</td>
+                                {% endfor %}
+                            </tr>
                             {% endfor %}
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </center>
-            </div>
+                        </table>
+                    </center>
+                </div>
+                {% endif %}
+
+                {% if classes + 1 <= len_one - 1 and dataLessons_gid_one[classes + 1][0]|length == 6 %}
+                <div class="slider__item">
+                    <!-- содержимое слайда -->
+                    <center>
+                        <h1 class="text" style="font-size: 3vw;">{{ day_week }}</h1>
+                        <h1 class="text" style="font-size: 3vw;"> I смена </h1>
+                        <table>
+                            <tr>
+                                <th style="width: 50px">№</th>
+                                <th style="width: 400px">Время </th>
+                                {% for cnt_classe in dataLessons_gid_one[classes][0] %}
+                                    <th style="width: 600px">{{ cnt_classe.upper() }}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for elem in dataLessons_gid_one[classes][1:] %}
+                            <tr>
+                                <td>{{ elem[1] }}</td>
+                                <td>{{ elem[2] }}</td>
+                                {% for lessons in elem[3:] %}
+                                    <td>{{ lessons }}</td>
+                                {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </center>
+                </div>
+                {% endif %}
             {% endfor %}
 
             {% for classes in range(len_two) %}
-            <div class="slider__item">
-                <!-- содержимое слайда -->
-                <center>
-                    <h1 class="text" style="font-size: 3vw;">{{ day_week }}</h1>
-                    <h1 class="text" style="font-size: 3vw;">II смена</h1>
-                    <table>
-                        <tr>
-                            <th style="width: 50px">№</th>
-                            <th style="width: 800px">Время</th>
-                            {% for cnt_classe in dataLessons_gid_two[classes][0] %}
-                            <th style="width: 800px">{{ cnt_classe.upper() }}</th>
+
+                {% if classes + 1 == len_two - 1 and dataLessons_gid_two[classes + 1][0]|length < 6 %}
+                <div class="slider__item">
+                    <!-- содержимое слайда -->
+                    <center>
+                        <h1 class="text" style="font-size: 3vw;">{{ day_week }}</h1>
+                        <h1 class="text" style="font-size: 3vw;"> I смена </h1>
+                        <table>
+                            <tr>
+                                <th style="width: 50px">№</th>
+                                <th style="width: 400px">Время </th>
+                                {% for cnt_classe in dataLessons_gid_two[classes][0] %}
+                                    <th style="width: 600px">{{ cnt_classe.upper() }}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for elem in dataLessons_gid_one[classes][1:] %}
+                            <tr>
+                                <td>{{ elem[1] }}</td>
+                                <td>{{ elem[2] }}</td>
+                                {% for lessons in elem[3:] %}
+                                    <td>{{ lessons }}</td>
+                                {% endfor %}
+                            </tr>
                             {% endfor %}
-                        </tr>
-                        {% for elem in dataLessons_gid_two[classes][1:] %}
-                        <tr>
-                            <td>{{ elem[1] }}</td>
-                            <td>{{ elem[2] }}</td>
-                            {% for lessons in elem[3:] %}
-                            <td>{{ lessons }}</td>
+                        </table>
+
+                        <table>
+                            <tr>
+                                <th style="width: 50px">№</th>
+                                <th style="width: 400px">Время </th>
+                                {% for cnt_classe in dataLessons_gid_two[classes + 1][0] %}
+                                    <th style="width: 600px">{{ cnt_classe.upper() }}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for elem in dataLessons_gid_two[classes + 1][1:] %}
+                            <tr>
+                                <td>{{ elem[1] }}</td>
+                                <td>{{ elem[2] }}</td>
+                                {% for lessons in elem[3:] %}
+                                    <td>{{ lessons }}</td>
+                                {% endfor %}
+                            </tr>
                             {% endfor %}
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </center>
-            </div>
-                {% endfor %}
+                        </table>
+                    </center>
+                </div>
+
+                {% elif classes + 1 <= len_two - 1 and dataLessons_gid_two[classes + 1][0]|length == 6 %}
+                <div class="slider__item">
+                    <!-- содержимое слайда -->
+                    <center>
+                        <h1 class="text" style="font-size: 3vw;">{{ day_week }}</h1>
+                        <h1 class="text" style="font-size: 3vw;"> I смена </h1>
+                        <table>
+                            <tr>
+                                <th style="width: 50px">№</th>
+                                <th style="width: 400px">Время </th>
+                                {% for cnt_classe in dataLessons_gid_two[classes][0] %}
+                                    <th style="width: 600px">{{ cnt_classe.upper() }}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for elem in dataLessons_gid_two[classes][1:] %}
+                            <tr>
+                                <td>{{ elem[1] }}</td>
+                                <td>{{ elem[2] }}</td>
+                                {% for lessons in elem[3:] %}
+                                    <td>{{ lessons }}</td>
+                                {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </center>
+                </div>
+
+                {% else %}
+                    <div class="slider__item">
+                        <!-- содержимое слайда -->
+                        <center>
+                            <h1 class="text" style="font-size: 3vw;">{{ day_week }}</h1>
+                            <h1 class="text" style="font-size: 3vw;">II смена</h1>
+                            <table>
+                                <tr>
+                                    <th style="width: 50px">№</th>
+                                    <th style="width: 800px">Время</th>
+                                    {% for cnt_classe in dataLessons_gid_two[classes][0] %}
+                                    <th style="width: 800px">{{ cnt_classe.upper() }}</th>
+                                    {% endfor %}
+                                </tr>
+                                {% for elem in dataLessons_gid_two[classes][1:] %}
+                                <tr>
+                                    <td>{{ elem[1] }}</td>
+                                    <td>{{ elem[2] }}</td>
+                                    {% for lessons in elem[3:] %}
+                                    <td>{{ lessons }}</td>
+                                    {% endfor %}
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </center>
+                    </div>
+
+                {% endif %}
+
+            {% endfor %}
 <!-- КОНСАЛТ -->
             <div class="slider__item">
                 <!-- содержимое слайда -->
